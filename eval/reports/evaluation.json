@@ -1,0 +1,184 @@
+{
+  "items": 1200,
+  "trials": 200,
+  "annotators": {
+    "fleiss_kappa": 0.6766085289147876,
+    "annotator_1_kappa_vs_majority": 0.8914215778901192,
+    "annotator_2_kappa_vs_majority": 0.8352339120646821,
+    "annotator_3_kappa_vs_majority": 0.7785078035568131,
+    "majority_kappa_vs_truth": 0.9706817384248393
+  },
+  "judges": {
+    "exact match": {
+      "kappa_vs_humans": 0.0166627719674415,
+      "accuracy_vs_truth": 0.3138888888888889,
+      "pass_rate": 0.021111111111111112,
+      "wrong_passed_long": 0.0,
+      "wrong_passed_short": 0.0
+    },
+    "token F1 >= 0.30": {
+      "kappa_vs_humans": 0.252116229333948,
+      "accuracy_vs_truth": 0.68,
+      "pass_rate": 0.665,
+      "wrong_passed_long": 0.11728395061728394,
+      "wrong_passed_short": 0.6328767123287671
+    },
+    "rubric (listed phrasings)": {
+      "kappa_vs_humans": 0.5088579903419485,
+      "accuracy_vs_truth": 0.7505555555555555,
+      "pass_rate": 0.4577777777777778,
+      "wrong_passed_long": 0.0,
+      "wrong_passed_short": 0.0
+    },
+    "model judge": {
+      "kappa_vs_humans": 0.754792721371384,
+      "accuracy_vs_truth": 0.9077777777777778,
+      "pass_rate": 0.7072222222222222,
+      "wrong_passed_long": 0.2716049382716049,
+      "wrong_passed_short": 0.10684931506849316
+    },
+    "rubric (calibrated)": {
+      "kappa_vs_humans": 0.9113697287073738,
+      "accuracy_vs_truth": 0.9744444444444444,
+      "pass_rate": 0.6838888888888889,
+      "wrong_passed_long": 0.0,
+      "wrong_passed_short": 0.005479452054794521
+    }
+  },
+  "learned_phrasings": [
+    "choose the reset option on the sign in page",
+    "faults are covered for <n> years from purchase",
+    "keep the order confirmation because we ask for it",
+    "send it back no later than <n> days after delivery",
+    "the payment leaves your account each month on day <n>",
+    "within <n> days weekends excluded",
+    "you have <n> minutes before the email link stops working",
+    "you pay \u00a3 <n> for delivery",
+    "you pay \u00a3 <n> for plan"
+  ],
+  "pairwise": {
+    "single_order_agreement": 0.8420195439739414,
+    "picked_first_when_worse_first": 0.3241042345276873,
+    "debiased_agreement_on_decided": 0.9741176470588235,
+    "debiased_decided_share": 0.6921824104234527
+  },
+  "gate": {
+    "no change (A/A)": {
+      "statistical": 0.025,
+      "uncorrected": 0.12,
+      "overall mean": 0.495,
+      "any slice": 0.965
+    },
+    "better everywhere (+3 pts recall)": {
+      "statistical": 0.0,
+      "uncorrected": 0.005,
+      "overall mean": 0.0,
+      "any slice": 0.35
+    },
+    "better overall, returns -10 pts": {
+      "statistical": 0.96,
+      "uncorrected": 0.985,
+      "overall mean": 0.015,
+      "any slice": 1.0
+    },
+    "better overall, returns -5 pts": {
+      "statistical": 0.425,
+      "uncorrected": 0.63,
+      "overall mean": 0.0,
+      "any slice": 0.98
+    }
+  },
+  "power": {
+    "150": 0.04,
+    "300": 0.3,
+    "600": 0.66,
+    "1200": 0.95
+  },
+  "release": [
+    {
+      "scope": "overall",
+      "n": 1200,
+      "base": 0.7616666666666667,
+      "cand": 0.82,
+      "diff": 0.05833333333333324,
+      "ci": [
+        0.025,
+        0.09166666666666666
+      ],
+      "p": 0.0005269228283509943,
+      "p_adj": 0.003161536970105966
+    },
+    {
+      "scope": "billing",
+      "n": 240,
+      "base": 0.7958333333333333,
+      "cand": 0.8875,
+      "diff": 0.09166666666666667,
+      "ci": [
+        0.025,
+        0.15833333333333333
+      ],
+      "p": 0.00921048969455458,
+      "p_adj": 0.03684195877821832
+    },
+    {
+      "scope": "shipping",
+      "n": 240,
+      "base": 0.8,
+      "cand": 0.8833333333333333,
+      "diff": 0.08333333333333326,
+      "ci": [
+        0.016666666666666666,
+        0.15416666666666667
+      ],
+      "p": 0.02052693371370707,
+      "p_adj": 0.06158080114112121
+    },
+    {
+      "scope": "returns",
+      "n": 240,
+      "base": 0.75,
+      "cand": 0.6708333333333333,
+      "diff": -0.07916666666666672,
+      "ci": [
+        -0.1625,
+        0.004166666666666667
+      ],
+      "p": 0.07848502733901798,
+      "p_adj": 0.12981729414454435
+    },
+    {
+      "scope": "account",
+      "n": 240,
+      "base": 0.8416666666666667,
+      "cand": 0.9,
+      "diff": 0.05833333333333335,
+      "ci": [
+        0.0,
+        0.11666666666666667
+      ],
+      "p": 0.06490864707227217,
+      "p_adj": 0.12981729414454435
+    },
+    {
+      "scope": "product",
+      "n": 240,
+      "base": 0.6208333333333333,
+      "cand": 0.7583333333333333,
+      "diff": 0.13749999999999996,
+      "ci": [
+        0.05416666666666667,
+        0.22083333333333333
+      ],
+      "p": 0.002033169531309131,
+      "p_adj": 0.010165847656545653
+    }
+  ],
+  "release_decisions": {
+    "statistical": false,
+    "uncorrected": false,
+    "overall mean": false,
+    "any slice": true
+  },
+  "seconds": 443.8288534998428
+}
