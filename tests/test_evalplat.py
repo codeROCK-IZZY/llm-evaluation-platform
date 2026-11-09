@@ -113,6 +113,6 @@ def test_gate_ships_an_unchanged_release() -> None:
 
 
 def test_cli_compare_exit_codes() -> None:
-    assert main(["compare", "--items", "600"]) == 0
+    assert main(["compare"]) == 0
     assert main(["compare", "--slice", "returns", "--slice-recall", "0.6"]) == 1
     random.seed(0)
